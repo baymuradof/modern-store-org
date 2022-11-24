@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .menu{
+    left: 0;
+}
+
+#checkbox:checked ~ .bottom .container .menucheck{
+    display: none;
+}
+.temp-nav{
+    width: 100%;
+    display: none;
+}
+.temp-nav .top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.temp-nav .bottom{
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    margin-top: 10px;
+}
+.menu{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    left: -100%;
+    transition: .4s;
+    height: 100vh;
+    justify-content: flex-start;
+}
+.menu i{
+    color: white;
+    font-size: 20px;
+}
+.menu i:hover{
+    color: #FFC170;
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: #FFC170;
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: #FFC170;
+    transition: 0.5s;
+}
+.fa-magnifying-glass{
+    font-size: 16px;
+}
+.menu a{
+    color: white;
+    font-size: 20px;
+}
+.menu-icons a{
+    font-size: 35px;
+    display: flex;
+}
+.smaller{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+    justify-content: center;
+}
+.smaller a{
+    font-size: 24px;
+    color: white;
+}
+.menu i{
+    font-size: 35px;
+}
+.temp-nav .container{
+    width: 80%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.temp-nav .container i{
+    color: white;
+    font-size: 30px;
+}
+.navbar{
+    display: flex;
+    width: 90%;
+    margin: 0 auto; 
+    justify-content: space-between;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(99, 96, 96, 0.294);
+    padding-bottom: 10px;
+}
+nav{
+    display: flex;
+    gap: 60px;
+    color: black;
+    font-size: 22px;
+}
+nav li{
+    color: black;
+}
+nav li:hover{
+    color:#FFC170;
+    padding-bottom: 2px;
+    border-bottom: 1px solid sandybrown;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
+.icons i{
+    font-size: 22px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+.navbar .icons i:hover{
+    background-color: #FFE1B9;
+    color: white;
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+.navbar-bottom .top{
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+.search-bar{
+    display: flex;
+}
+.search-bar input{
+    width: 600px;
+    height: 50px;
+    border: none;
+    background-color: #F5F5F5;
+    padding-left: 10px;
+}
+.magnify{
+    height: 49px;
+    padding: 10px 15px;
+    background-color: #FFC170;
+    border-radius:0 50px 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown{
+    width: 100px;
+    height: 40px;
+    position: relative;
+}
+.dropdown:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-select{
+    padding: 15px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.dropdown:focus{
+    border-radius: 20px 0px 0px 20px;
+}
+.select{
+    display: flex;
+    gap: 25px;
+}
+.dropdown-list{
+    border-radius:  0px 0px 0px 20px;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+    overflow: hidden;
+}
+.dropdown-list_item{
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.dropdown-list_item:hover{
+    background-color: #FFC170;
+}
+.navbar-bottom .icon{
+    display: flex;
+    gap: 20px;
+}
+.navbar-bottom .icon i{
+    font-size: 26px;
+}
+.navbar-bottom .icon i:hover{
+    color: #FFE1B9;
+}
+.navbar-bottom .bottom{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.navbar-bottom .bottom a{
+    color: white;
+}
+.navbar-bottom .bottom a:first-child{
+    color:#FFC170;
+}
+.navbar-bottom .bottom a:hover{
+    color:#FFC170;
+}
+.hero{
+    border: 10px solid #E5E5E5;
+    height: 500px;
+    background-size:cover;
+    background-image: url(./accets/iceberg.jpeg);
+    width: 95%;
+    margin: 0 auto;
+}
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px ;
+    align-items: flex-start;
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+.hero h1{
+    color: white;
+    font-size: 40px;
+}
+.hero h2{
+    color: white;
+}
+.hero button{
+    padding: 15px 30px; 
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.sale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 140px;
+}
+.sale .cards{
+    width: 95%;
+    justify-content: space-between;
+    margin-top: 40px;
+    display: flex;
+}
+.sale .card{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+}
+.sale .card img{
+    width: 300px;
+    height: 300px;
+}
+.shop{
+    font-size: 40px;
+}
+.card-text{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.sale .card:hover{
+    width: 300px;
+    height: 310px;
+    background-color: black;
+    transition: 0.5s;
+}
+.sale .card:hover img{
+    width: 300px;
+    height: 310px;
+    background-color: black;
+    transition: 0.4 s;
+    opacity: 0.9;
+}
+.category .cards{
+    justify-content: space-around;
+}
+.recard{
+    width: 400px;
+    height: 500px;
+}
+.recard img{
+    width: 400px;
+    height: 500px;
+}
+.recard{
+    width: 400px;
+    height: 500px;
+}
+.recard img:hover{
+    opacity: 0.9;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 80px;
+    background-color: black;
+}
+footer a{
+    color: white;
+    font-size: 25px;
+}
+
+
+
+
+
+
+@media only screen and (max-width:1264px){
+    .sale .cards{
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .sale .card{
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width:1150px){
+    .temp-nav{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar-bottom{
+        display: none;
+    }
+    .hero{
+        border: none;
+        width: 100%;
+    }
+    .sale .cards{
+        width: 95%;
+        justify-content: space-around;
+        margin-top: 40px;
+        display: flex;
+    }
+    .shop{
+        font-size: 30px;
+    }
+    .recard{
+        margin-top: 50px;
+    }
+    .menu{
+        width: 100%;
+    }
+    .sale{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+    .recard{
+        width: 300px;
+        height: 400px;
+    }
+    .recard img{
+        width: 300px;
+        height: 400px;
+    }
+    .search-bar input{
+        width: 500px;
+    }
+    .dropdown-select{
+        padding: 7px;
+    }
+}
+@media only screen and (max-width:800px){
+    .sale .cards{
+        width: 95%;
+        justify-content: space-around;
+        margin-top: 40px;
+        display: flex;
+    }
+    .sale .card{
+        margin-top: 20px;
+    }
+    .search-bar input{
+        width: 380px;
+    }
+}
+@media only screen and (max-width:550px){
+    .hero h1{
+        color: white;
+        font-size: 20px;
+    }
+    .hero h2{
+        color: white;
+        font-size: 14px ;
+    }
+    .hero .container{
+        width: 40%;
+    }
+    .hero button{
+        padding: 10px 20px; 
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .shop{
+        font-size: 20px;
+    }
+    .sale{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    .recard{
+        max-width: 280px;
+        height: 300px;
+    }
+    .cardd h2{
+        font-size: 20px;
+    }
+    .recard h2{
+        font-size: 20px;
+    }
+    .recard img{
+        max-width: 280px;
+        height: 300px;
+    }
+    .sale .card{
+        max-width: 280px;
+        height: 300px;
+        background-color: black;
+    }
+    .sale .card img{
+        max-width: 280px;
+        height: 300px;
+    }
+    footer a{
+        color: white;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+    .temp-nav .container i{
+        font-size: 20px;
+    }
+    .search-bar input{
+        max-width: 100px;
+    }
+    .menu a{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .menu-icons a{
+        font-size: 25px;
+        display: flex;
+    }
+    .smaller{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 15px;
+        justify-content: center;
+    }
+    .smaller a{
+        font-size: 20px;
+        color: white;
+    }
+}
+@media only screen and (max-width:280px){
+    .hero h1{
+        color: white;
+        font-size: 20px;
+    }
+    .hero h2{
+        color: white;
+        font-size: 14px ;
+    }
+    .hero .container{
+        width: 40%;
+    }
+    .hero button{
+        padding: 10px 20px; 
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .shop{
+        font-size: 20px;
+    }
+    .sale{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    .recard{
+        margin-top: 80px;
+        max-width: 240px;
+        height: 280px;
+    }
+    .cardd h2{
+        font-size: 16px;
+    }
+    .recard h2{
+        font-size: 16px;
+    }
+    .recard img{
+        max-width: 240px;
+        height: 280px;
+    }
+    .sale .card{
+        max-width: 240px;
+        height: 280px;
+        background-color: black;
+    }
+    .sale .card img{
+        max-width: 240px;
+        height: 280px;
+    }
+    footer a{
+        margin-left: 10px;
+        max-width: 240px;
+        font-size: 15px;
+    }
+    .temp-nav .container i{
+        font-size: 20px;
+    }
+    .search-bar input{
+        max-width: 60px;
+    }
+}
